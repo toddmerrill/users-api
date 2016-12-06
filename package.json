@@ -1,0 +1,11 @@
+{
+  "name": "users-api",
+  "version": "1.0.0",
+  "description": "AWS client to access user information",
+  "main": "users-rest-api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Todd Merrill",
+  "license": "ISC"
+}
