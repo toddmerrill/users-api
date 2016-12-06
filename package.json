@@ -1,6 +1,6 @@
 {
   "name": "users-api",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "AWS client to access user information",
   "main": "users-rest-api.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "author": "Todd Merrill",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "ramda": "^0.22.1",
     "superagent": "^3.1.0"
   }
