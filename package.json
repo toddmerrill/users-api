@@ -1,21 +1,27 @@
 {
   "name": "users-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AWS client to access user information",
   "main": "lib/users-rest-api.js",
   "scripts": {
-      "compile": "babel --presets es2015,stage-0 -d lib/ src/",
-      "prepublish": "npm run compile"
+    "compile": "babel --presets es2015,stage-0 -d lib/ src/",
+    "testcompile": "babel --presets es2015,stage-0 -d testlib/ test/",
+    "prepublish": "npm run test",
+    "test": "npm run compile; npm run testcompile; mocha --recursive testlib"
   },
   "author": "Todd Merrill",
   "license": "ISC",
   "dependencies": {
-    "ramda": "^0.22.1",
-    "superagent": "^3.1.0"
+    "isomorphic-fetch": "^2.2.1",
+    "ramda": "^0.22.1"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-stage-0": "^6.22.0"
+    "babel-preset-stage-0": "^6.22.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "^3.2.0"
   }
 }
