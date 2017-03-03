@@ -21,13 +21,9 @@ describe('save and delete user', () => {
         age: 119
     }
 
-    it('saves a test user', () => {
-        return assert.isFulfilled(
-            usersApi.saveUser(testUser)
-        )
-    })
+    it('saves a test user, then deletes it', (done) => {
+        assert.isFulfilled(usersApi.saveUser(testUser)
+               .then((user) => usersApi.deleteUser(user))).then(()=>done());
 
-    after(() => {
-         return usersApi.deleteUser(testUser);
     })
 });
