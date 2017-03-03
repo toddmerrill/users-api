@@ -1,6 +1,6 @@
 {
   "name": "users-api",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "description": "AWS client to access user information",
   "main": "lib/users-rest-api.js",
   "scripts": {

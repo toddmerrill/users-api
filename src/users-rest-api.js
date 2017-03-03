@@ -7,7 +7,7 @@ const headers = new Headers();
 headers.set("x-api-key", apiKey)
 headers.set('Accept', 'application/json, text/plain, */*')
 headers.set('Content-Type', 'application/json')
-// headers.set('cache-control', 'no-cache')  // for testing
+headers.set('cache-control', 'no-cache')  // for testing
 const conf = {headers}
 
 const R = require('ramda');
@@ -29,11 +29,11 @@ const saveUser = (user) => {
 }
 
 const deleteUser = (user) => {
-    const req = new Request(resourceUrl + "/" + user.userId, { ...conf,
-                                        method: 'DELETE' });
+    const req = new Request(resourceUrl + "/" + user.userId,
+                                { ...conf, method: 'DELETE' });
     return fetch(req)
         // .then(logResponse)
-        .then((res) => res.json());
+        .then((res) => res.json())
 }
 
 const logResponse = (res) => {

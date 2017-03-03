@@ -12,18 +12,22 @@ describe('get users', function () {
     });
 });
 
-describe('save and delete user', function () {
-    it('saves a test user, then deletes without error', function () {
-        const testId = Date.now();
-        const testUser = {
-          userId: testId,
-          firstName: "IntTestFirst",
-          lastName: "IntTestLast",
-          age: 119
-        }
+describe('save and delete user', () => {
+    const testId = ''+Date.now()
+    const testUser = {
+        userId: testId,
+        firstName: "IntTestFirst",
+        lastName: "IntTestLast",
+        age: 119
+    }
+
+    it('saves a test user', () => {
         return assert.isFulfilled(
-            usersApi.saveUser(testUser).then(
-                usersApi.deleteUser(testUser))
-            );
-    });
+            usersApi.saveUser(testUser)
+        )
+    })
+
+    after(() => {
+         return usersApi.deleteUser(testUser);
+    })
 });

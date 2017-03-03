@@ -9,7 +9,7 @@ playing around with ;)
 
 #### Functions:
 
-    getUsers()
+    retrieveUsers()
     saveUser(user)
     deleteUser(user)
 
@@ -26,6 +26,7 @@ playing around with ;)
 #### Installation:
 
 npm install
+
 #### Test suite:
 
 npm test
