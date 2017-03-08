@@ -7,7 +7,7 @@ const headers = new Headers();
 headers.set("x-api-key", apiKey)
 headers.set('Accept', 'application/json, text/plain, */*')
 headers.set('Content-Type', 'application/json')
-headers.set('cache-control', 'no-cache')  // for testing
+// headers.set('cache-control', 'no-cache')  // for testing
 const conf = {headers}
 
 const R = require('ramda');
