@@ -13,9 +13,8 @@ describe('get users', function () {
 });
 
 describe('save and delete user', () => {
-    const testId = ''+Date.now()
     const testUser = {
-        userId: testId,
+        userId: Date.now().toString(),
         firstName: "IntTestFirst",
         lastName: "IntTestLast",
         age: 119
